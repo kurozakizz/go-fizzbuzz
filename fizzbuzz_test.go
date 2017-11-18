@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func TestOneShouldSayOne(t *testing.T) {
+func Test1ShouldSay1(t *testing.T) {
 	expected := "1"
 
 	actual := Say(1)
