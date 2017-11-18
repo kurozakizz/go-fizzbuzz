@@ -4,22 +4,20 @@ import (
 	"testing"
 )
 
-func Test1ShouldSay1(t *testing.T) {
-	expected := "1"
-
-	actual := say(1)
-
+func assert(expected string, actual string, t *testing.T) {
 	if expected != actual {
 		t.Fatal("Expected say", expected, "but actually said", actual)
 	}
 }
 
+func Test1ShouldSay1(t *testing.T) {
+	expected := "1"
+	actual := say(1)
+	assert(expected, actual, t)
+}
+
 func Test2ShouldSay2(t *testing.T) {
 	expected := "2"
-
 	actual := say(2)
-
-	if expected != actual {
-		t.Fatal("Expected say", expected, "but actually said", actual)
-	}
+	assert(expected, actual, t)
 }
