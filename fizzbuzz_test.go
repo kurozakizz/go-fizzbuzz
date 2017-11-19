@@ -4,9 +4,27 @@ import (
 	"testing"
 )
 
-func assert(expected string, actual string, t *testing.T) {
-	if expected != actual {
-		t.Fatal("Expected say", expected, "but actually said", actual)
+type testData struct {
+	number   int
+	expected string
+}
+
+func TestNonFizzBuzzNumberShouldSayNonFizzBuzzNumber(t *testing.T) {
+	testList := []testData{
+		testData{number: 1, expected: "1"},
+		testData{number: 2, expected: "2"},
+		testData{number: 4, expected: "4"},
+		testData{number: 7, expected: "7"},
+		testData{number: 8, expected: "8"},
+		testData{number: 11, expected: "11"},
+		testData{number: 13, expected: "13"},
+		testData{number: 14, expected: "14"},
+	}
+	fizzBuzz := FizzBuzz{}
+
+	for _, data := range testList {
+		actual := fizzBuzz.say(data.number)
+		assert(data.expected, actual, t)
 	}
 }
 
@@ -99,4 +117,10 @@ func Test30ShouldSayFizzBuzz(t *testing.T) {
 	fizzBuzz := FizzBuzz{}
 	actual := fizzBuzz.say(30)
 	assert(expected, actual, t)
+}
+
+func assert(expected string, actual string, t *testing.T) {
+	if expected != actual {
+		t.Fatal("Expected say", expected, "but actually said", actual)
+	}
 }
