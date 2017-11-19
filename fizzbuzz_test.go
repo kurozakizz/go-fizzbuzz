@@ -27,3 +27,9 @@ func Test3ShouldSayFizz(t *testing.T) {
 	actual := say(3)
 	assert(expected, actual, t)
 }
+
+func Test4ShouldSay4(t *testing.T) {
+	expected := "4"
+	actual := say(4)
+	assert(expected, actual, t)
+}
