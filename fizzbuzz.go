@@ -21,7 +21,7 @@ func newFizzBuzz() *FizzBuzz {
 
 func (f FizzBuzz) say(number int) string {
 	isFizz := (number % f.fizzNumber) == 0
-	isBuzz := number == f.buzzNumber
+	isBuzz := (number % f.buzzNumber) == 0
 	if isFizz {
 		return f.fizzMessage
 	}
