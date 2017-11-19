@@ -28,31 +28,10 @@ func TestNonFizzBuzzNumberShouldSayNonFizzBuzzNumber(t *testing.T) {
 	}
 }
 
-func Test1ShouldSay1(t *testing.T) {
-	expected := "1"
-	fizzBuzz := FizzBuzz{}
-	actual := fizzBuzz.say(1)
-	assert(expected, actual, t)
-}
-
-func Test2ShouldSay2(t *testing.T) {
-	expected := "2"
-	fizzBuzz := FizzBuzz{}
-	actual := fizzBuzz.say(2)
-	assert(expected, actual, t)
-}
-
 func Test3ShouldSayFizz(t *testing.T) {
 	expected := "Fizz"
 	fizzBuzz := FizzBuzz{}
 	actual := fizzBuzz.say(3)
-	assert(expected, actual, t)
-}
-
-func Test4ShouldSay4(t *testing.T) {
-	expected := "4"
-	fizzBuzz := FizzBuzz{}
-	actual := fizzBuzz.say(4)
 	assert(expected, actual, t)
 }
 
@@ -67,20 +46,6 @@ func Test6ShouldSayFizz(t *testing.T) {
 	expected := "Fizz"
 	fizzBuzz := FizzBuzz{}
 	actual := fizzBuzz.say(6)
-	assert(expected, actual, t)
-}
-
-func Test7ShouldSay7(t *testing.T) {
-	expected := "7"
-	fizzBuzz := FizzBuzz{}
-	actual := fizzBuzz.say(7)
-	assert(expected, actual, t)
-}
-
-func Test8ShouldSay8(t *testing.T) {
-	expected := "8"
-	fizzBuzz := FizzBuzz{}
-	actual := fizzBuzz.say(8)
 	assert(expected, actual, t)
 }
 
