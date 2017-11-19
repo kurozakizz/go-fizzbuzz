@@ -58,3 +58,10 @@ func Test7ShouldSay7(t *testing.T) {
 	actual := fizzBuzz.say(7)
 	assert(expected, actual, t)
 }
+
+func Test8ShouldSay8(t *testing.T) {
+	expected := "8"
+	fizzBuzz := newFizzBuzz()
+	actual := fizzBuzz.say(8)
+	assert(expected, actual, t)
+}
