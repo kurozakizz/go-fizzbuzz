@@ -20,10 +20,12 @@ func newFizzBuzz() *FizzBuzz {
 }
 
 func (f FizzBuzz) say(number int) string {
-	if number == f.fizzNumber {
+	isFizz := number == f.fizzNumber
+	isBuzz := number == f.buzzNumber
+	if isFizz {
 		return f.fizzMessage
 	}
-	if number == f.buzzNumber {
+	if isBuzz {
 		return f.buzzMessage
 	}
 	return strconv.Itoa(number)
