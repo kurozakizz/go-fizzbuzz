@@ -21,3 +21,9 @@ func Test2ShouldSay2(t *testing.T) {
 	actual := say(2)
 	assert(expected, actual, t)
 }
+
+func Test3ShouldSayFizz(t *testing.T) {
+	expected := "Fizz"
+	actual := say(3)
+	assert(expected, actual, t)
+}
