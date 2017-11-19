@@ -2,16 +2,29 @@ package fizzbuzz
 
 import "strconv"
 
-func say(number int) string {
-	const fizzNumber = 3
-	const buzzNumber = 5
-	const fizzMessage = "Fizz"
-	const buzzMessage = "Buzz"
-	if number == fizzNumber {
-		return fizzMessage
+type FizzBuzz struct {
+	fizzNumber  int
+	buzzNumber  int
+	fizzMessage string
+	buzzMessage string
+}
+
+func newFizzBuzz() *FizzBuzz {
+	f := FizzBuzz{
+		fizzNumber:  3,
+		buzzNumber:  5,
+		fizzMessage: "Fizz",
+		buzzMessage: "Buzz",
 	}
-	if number == buzzNumber {
-		return buzzMessage
+	return &f
+}
+
+func (f FizzBuzz) say(number int) string {
+	if number == f.fizzNumber {
+		return f.fizzMessage
+	}
+	if number == f.buzzNumber {
+		return f.buzzMessage
 	}
 	return strconv.Itoa(number)
 }
