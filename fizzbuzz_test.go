@@ -76,20 +76,6 @@ func TestFizzBuzzNumberShouldSayFizzBuzz(t *testing.T) {
 	}
 }
 
-func Test15ShouldSayFizzBuzz(t *testing.T) {
-	expected := "FizzBuzz"
-	fizzBuzz := FizzBuzz{}
-	actual := fizzBuzz.say(15)
-	assert(expected, actual, t)
-}
-
-func Test30ShouldSayFizzBuzz(t *testing.T) {
-	expected := "FizzBuzz"
-	fizzBuzz := FizzBuzz{}
-	actual := fizzBuzz.say(30)
-	assert(expected, actual, t)
-}
-
 func assert(expected string, actual string, t *testing.T) {
 	if expected != actual {
 		t.Fatal("Expected say", expected, "but actually said", actual)
