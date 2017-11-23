@@ -60,20 +60,6 @@ func TestBuzzNumberShouldSayBuzz(t *testing.T) {
 	}
 }
 
-func Test5ShouldSayBuzz(t *testing.T) {
-	expected := "Buzz"
-	fizzBuzz := FizzBuzz{}
-	actual := fizzBuzz.say(5)
-	assert(expected, actual, t)
-}
-
-func Test10ShouldSayBuzz(t *testing.T) {
-	expected := "Buzz"
-	fizzBuzz := FizzBuzz{}
-	actual := fizzBuzz.say(10)
-	assert(expected, actual, t)
-}
-
 func Test15ShouldSayFizzBuzz(t *testing.T) {
 	expected := "FizzBuzz"
 	fizzBuzz := FizzBuzz{}
