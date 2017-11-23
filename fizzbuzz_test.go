@@ -44,6 +44,22 @@ func TestFizzNumberShouldSayFizz(t *testing.T) {
 	}
 }
 
+func TestBuzzNumberShouldSayBuzz(t *testing.T) {
+	testList := []testData{
+		testData{number: 5, expected: buzzMessage},
+		testData{number: 10, expected: buzzMessage},
+		testData{number: 20, expected: buzzMessage},
+		testData{number: 25, expected: buzzMessage},
+		testData{number: 35, expected: buzzMessage},
+	}
+	fizzBuzz := FizzBuzz{}
+
+	for _, data := range testList {
+		actual := fizzBuzz.say(data.number)
+		assert(data.expected, actual, t)
+	}
+}
+
 func Test5ShouldSayBuzz(t *testing.T) {
 	expected := "Buzz"
 	fizzBuzz := FizzBuzz{}
